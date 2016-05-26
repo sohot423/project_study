@@ -14,3 +14,15 @@ height : auto; overflow: hidden; 을 주면 자식 엘리먼트가 flow되도 그 컨텐츠만큼 
 
 픽셀을 %로 바꾸는 백분율 계산
 100(A넓이)/898(전체넓이)*100=%
+
+outline 텍스트 테두리를 의미
+
+clear: left; --> float-left 속성을 가진 엘리먼트 밑에가서 붙는다. 
+
+저작자
+명시도
+우선순
+
+.text{color:#0F0}
+p{color:#F0F !important} - 1위
+#text{color:#FF0}
