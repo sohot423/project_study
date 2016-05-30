@@ -14,10 +14,30 @@
         }
         .header{
            outline: 1px red solid;
-           height:104px;
+           height:90px;
            margin:0 30px 15px;
            padding:17px 0 10px;
         }
+        .header .h_left{
+           outline: 1px red solid; 
+           float:left;
+           width:270px;
+           height:57px;
+           margin-bottom:10px;
+        }
+        .header .h_right{
+           outline: 1px red solid; 
+           float:right;
+           width:469px;
+           height:62px; 
+        }
+        .header .h_content{
+            outline: 1px red solid;
+            width:268px;
+            height:23px;
+            clear:left;
+        }
+        
         .content{
            outline: 1px red solid;
            height:380px;
@@ -49,9 +69,32 @@
             margin-bottom:10px;
         }     
         .right_c .bottom_content{
-        outline: 1px red solid;
-        height:190px;
+            outline: 1px red solid;
+            height:190px;
         } 
+        .c_1{
+            outline: 1px red solid;
+            height:49px;
+            padding-top:10px;
+        }
+        .c_2{
+            outline: 1px red solid; 
+            height:95px;
+            margin-top:5px;
+        }
+        .bottom_article .c_3{
+            outline: 1px red solid;
+            width:360px;
+            height:220px;
+            float:left;
+        }
+        .bottom_article .c_4{
+            outline: 1px red solid;
+            height:220px;
+            margin-left:375px;
+        }
+        
+        
     </style>
 </head>
 <body>
@@ -64,12 +107,18 @@
         
         <div class="content">
             <div class="left_c">
-                <div class="top_article"></div>
-                <div class="bottom_article"></div>
+                <div class="top_article">
+                    <div class="c_1">contents1</div>
+                    <div class="c_2">contents2</div>
+                </div>
+                <div class="bottom_article">
+                    <div class="c_3">contents3</div>
+                    <div class="c_4">img</div>
+                </div>    
             </div>
             <div class="right_c">
-                <div class="top_content"></div>
-                <div class="bottom_content"></div>
+                <div class="top_content">gg</div>
+                <div class="bottom_content">ggggg</div>
             </div>
             
         </div>
