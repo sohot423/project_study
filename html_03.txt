@@ -73,4 +73,39 @@ div > p 조건선택자 : 하위구조중에 같은 조건인 경우에만 해당
 인라인은 마진값도 좌우만 먹고 상하는 먹지않음.
 패딩은 먹히지만 위치변동은 생기지않는다. display 속성을 블럭으로 바꿔주면 제어가 쉬움.
 
+아톰 ctrl shift h pull
 
+position 
+
+static 기본값, 포지션을 설정하지 않은 상태
+relative 상대적 / 현재의 위치로부터 상대적으로 위치를 잡음(활용 많음) - 실제로는 현재위치에 있음.
+absolute 절대적 / x축 y축 0기준 좌표 화면기준으로 움직임
+fixed 고정적 / 부모자식 관계 성립 안됨...브라우저에 픽스됨
+
+z-index 높낮이
+위치값
+top
+left
+right
+코드상 마지막으로 쓰는게 덮어버림. 그럴때 z-index:1; 을 주면 위로 올라옴
+
+parents
+나보다 상위(밖에 테두리)에 포지션이 선언되어있으면 내가 부모가 될 수 잇음. 
+(나보다 가까운 엘리먼트에 포지션을 주면 부모라고 인식)
+(포토샵에서 레이어 올려주는 효과)
+bottom
+
+
+div.*2
+ol>li*10>a{}
+
+파이어폭스 headingmap
+html validator
+shift + F5
+Emmet Review
+
+마진겹침현상 
+그래서 ul, ol, body, h1{margin:0; padding:0;} 
+* ir값
+
+.hide{width:0; height:0; overflow:hidden; position:absolute; left:-9999px; top:-9999px}
