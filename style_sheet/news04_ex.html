@@ -7,6 +7,8 @@
         *{margin:0;
           padding:0;
         }
+        a{text-decoration:none; cursor:pointer;}
+        img{vertical-align:top;}
         body{font-family:'돋움'; 
         background-image:url(../images/news_img/bg_img.png); width:100%;
         padding-top:152px ;
@@ -17,32 +19,33 @@
         .wrap1{
         outline:1px green solid;
         width:960px;
-        height:540px;
+        height:537px;
         margin:0 51px 0 51px;
+        background-image:url(../images/news_img/news_bg.png);
+        background-position: center;
         }       
         .wrap2{
         outline:1px blue solid;
         width:900px;
-        height:540px;
+        height:537px;
         margin:0 30px 0;
-        background-color:#FFF;
         }
         .header{
-        outline:1px red solid;
+        border-bottom:3px #545454 solid;
         width:840px;
-        height:111px;
+        height:108px;
         margin: 0 30px 0;
         position:relative;
         }
         .header .h_logo{
-        outline:1px red solid;
+        /*outline:1px red solid;*/
         width:260px;
         height:55px;
         position:relative;
         top:20px;
         }
         .header .h_banner{
-        outline:1px red solid; 
+        /*outline:1px red solid; */
         width:468px;
         height:60px;
         position:absolute;
@@ -50,22 +53,21 @@
         left:372px;
         }
         .header .h_button{
-        outline:1px red solid; 
+        /*outline:1px red solid; */
         width:300px;
-        height:25px;
+        height:21px;
         position:absolute;
         top:80px;
         }
         .content {
         outline:1px red solid; 
         width:840px;
-        height:429px; 
-        margin: 0 30px 0;
+        height:380px; 
+        margin:14px 30px 0 30px;
         position:relative;
     
         }
         .content .c_left{
-        outline:1px red solid; 
         width:243px;
         height:100%; 
         }
@@ -77,26 +79,136 @@
         left:253px;
         top:0;
         }
+        
+        
+        /*right컨텐츠*/
         .content .c_right{
-        outline:1px red solid; 
         width:261px;
         height:100%; 
         position:absolute;
         left:578px;
         top:0;
         }
-        ul li .thumb{
-        width:126px;
-        height:76px; 
-        display:block;
+        .c_right ul li{
+        float:left; 
         }
-        ul li .thumb_text{
+        .c_right ul li .thumb{
+        border:1px #000 solid;    
+        width:124px;
+        height:75px; 
+        display:block;
+        overflow:hidden;
+        }
+        .c_right ul li .thumb_text{
         width:126px;
         height:36px; 
         background-color:#000;
+        font-size:11px;
+        color:#ababab;
+        display:table-cell;
+        clear:both;
+        vertical-align:middle;
+        text-align:center;
+        }
+        .c_right ul li .thumb2{
+        border:1px #e4e4e4 solid;    
+        width:124px;
+        height:75px; 
+        display:inline-block;
+        float: left;
+        overflow:hidden;
+        }
+        .c_right ul li span.thumb_text2{
+        border:1px #e4e4e4 solid;
+        width:124px;
+        height:57px; 
+        background-color:#fff;
+        font-size:11px;
+        color:#000;
+        display:table-cell;
+        float:left;
+        clear:both;
+        vertical-align:middle;
+        text-align:center;
+        }
+        
+        
+        /*패딩*/
+        .l_p_1{margin:0 9px 0 0;}
+        .r_p_1{margin-top:0px;}
+        .l_p{margin:  9px 9px 0 0;}
+        .r_p{margin-top: 9px; }
+        
+        /*text */
+        .t_red{color:#de2f00;}
+        .t_black{color:#000;}
+        .f_b{font-weight:bold; }
+        /*.t_dc{text-decoration:none;}*/
+        
+        
+        /*가운데 컨텐츠*/
+        .c_top li{
+         border:1px #e4e4e4 solid; 
+         height:78px;
+        }
+        .c_top li strong{
+        font-size:14px;
+        line-height:20px;
+        }
+        .c_top li span {
         font-size:12px;
-        color:#FFF;
+        line-height:18px;
+        }
+        .c_top .thumb{
+        width: 100px;
+        height: 78px;
         display:block;
+        overflow:hidden;
+        float:left;
+        }
+        .c_top .thumb_text{
+        display:block;
+        margin-left:119px;
+        }
+        .c_top .thumb_text2{
+        display:block;
+        padding:0 10px;
+        }
+        .c_bottom{
+        border:1px #e4e4e4 solid;  
+        height:200px;
+        margin-top:9px;
+        }
+        .c_bottom ul li{
+        font-size:12px;    
+        line-height:28px;
+        border-top:1px #e4e4e4 solid;
+        padding:0 4px 0 4px;
+        }
+        .c_center .c_bottom ul li:first-child{
+        border-top:0px;
+        }
+        .content .c_left .l_t{
+        border:1px #e4e4e4 solid;  
+        width:243px;
+        height:265px;
+        }
+        
+        .c_left .l_t .t_t1{
+        display:block;
+        height:72px; 
+        }
+        .c_left .l_t .t_t2{
+        display:block;
+        height:42px; 
+        font-size:11px;
+        color:#8c8c8c;
+        }
+        .c_left .l_t p {
+            height:auto;
+            padding:0 15px;
+            overflow:hidden;
+            
         }
     </style>
 </head>
@@ -106,67 +218,112 @@
             <div class="header">
                 <div class="h_logo"><img src="../images/news_img/logo.png" alt=""/></div>
                 <div class="h_banner"><img src="../images/news_img/h_banner.png" alt=""/></div>
-                <div class="h_button"></div>
+                <div class="h_button">
+                     <span><img src="../images/news_img/h_button01.png" alt=""/></span>
+                     <span><img src="../images/news_img/h_button02.png" alt=""/></span>
+                     <span><img src="../images/news_img/h_button03.png" alt=""/></span>
+                </div>
             </div>
             <div class="content">
                 <div class="c_left">
-                    <div class="">
-                        <img src="../images/news_img/img01.png" alt=""/>
-                        <span></span>
+                    <div class="l_t">
+                        <span><img src="../images/news_img/img01.png" alt=""/></span>
+                        <p>
+                            <strong class="t_red f_b t_t1">베일벗은 프리미엄 SUV<br/>'QM6'...르노삼성 자신감 이유 있었네</strong>
+                            <span class="t_t2">[디지털 타임즈 노재웅기자] 르노삼성 자동차 는2일 언론공개일을 시작으로</span>
+                        </p>
+                    </div>
+                    <div class="l_b">
+                        <ul>
+                        <li class="l_p">
+                          <span class="thumb2">
+                            <img src="../images/news_img/l_img02.png" art="" />
+                          </span>
+                          <span class="thumb_text2">"타격기계김현수"3안타1볼넷
+                          </span>
+                       </li>
+                       </ul>
                     </div>
                 </div>
-                <div class="c_center"></div>
+                <div class="c_center">
+                    <div class="c_top">
+                     <ul>
+                        <li>
+                            <a href="">
+                                <span class="thumb">
+                                    <img src="../images/news_img/c_img01.png" alt="" />
+                                </span>
+                                <strong class="thumb_text">카카오 대리운전 호출버튼 누르자 2분만에...</strong>
+                                <span class="thumb_text">한여름 더위 속 미세먼지·오존 비상한여름 더위 속 미세먼지·오존 비상</span>
+                            </a>
+                        </li>
+                        <li class="r_p">
+                            <a href="">
+                                <strong class="thumb_text2">"영어가 뭐길래" 호출버튼 누르자 2분만에...</strong>
+                                <span class="thumb_text2">한여름 더위 속 미세먼지·오존 비상한여름 더위 속 미세먼지·오존 비상</span>
+                            </a>
+                        </li>
+                     </ul>    
+                    </div>
+                    
+                    <div class="c_bottom">
+                       <ul>
+                        <li class="t_red f_b">접었다폈다...서서 운전하는 소형전기차 만든다</li>
+                        <li class="f_b">접었다폈다...서서 운전하는 소형전기차 만든다</li>
+                        <li class="f_b">접었다폈다...서서 운전하는 소형전기차 만든다</li>
+                        <li class="t_red f_b">접었다폈다...서서 운전하는 소형전기차 만든다</li>
+                        <li class="f_b">접었다폈다...서서 운전하는 소형전기차 만든다</li>
+                        <li class="f_b">접었다폈다...서서 운전하는 소형전기차 만든다</li>
+                        <li class="f_b">접었다폈다...서서 운전하는 소형전기차 만든다</li>
+                       </ul>
+                    </div>
+
+                </div>
                 <div class="c_right">
                     <ul>
-                       <li>
+                       <li class="l_p_1">
                           <span class="thumb">
                             <img src="../images/news_img/r_img01.png" art="" />
                           </span>
-                          <span class="thumb_text">"타격기계김현수"3안타1볼넷
+                          <span class="thumb_text">"타격기계김현수"3안타1볼넷의료기기 클라우드
                           </span>
                        </li>
-                       <li>
-                          <span class="thumb">
+                       <li class="r_p_1" >
+                          <span class="thumb ">
                             <img src="../images/news_img/r_img02.png" art="" />
                           </span>
                           <span class="thumb_text">"타격기계김현수"3안타1볼넷
                           </span>
                        </li>
-                       <li>
-                          <span class="thumb">
+                       <li class="l_p">
+                          <span class="thumb ">
                             <img src="../images/news_img/r_img03.png" art="" />
                           </span>
                           <span class="thumb_text">"타격기계김현수"3안타1볼넷
                           </span>
                        </li>
-                       <li>
+                       <li class="r_p">
                           <span class="thumb">
                             <img src="../images/news_img/r_img04.png" art="" />
                           </span>
                           <span class="thumb_text">"타격기계김현수"3안타1볼넷
                           </span>
                        </li>
-                       <li>
-                          <span class="thumb">
+                       <li class="l_p">
+                          <span class="thumb2">
                             <img src="../images/news_img/r_img05.png" art="" />
                           </span>
-                          <span class="thumb_text">"타격기계김현수"3안타1볼넷
+                          <span class="thumb_text2">"타격기계김현수"3안타1볼넷
                           </span>
                        </li>
-                       <li>
-                          <span class="thumb">
+                       <li class="r_p">
+                          <span class="thumb2">
                             <img src="../images/news_img/r_img06.png" art="" />
                           </span>
-                          <span class="thumb_text">"타격기계김현수"3안타1볼넷
+                          <span class="thumb_text2">"타격기계김현수"3안타1볼넷
                           </span>
                        </li>
-                       <li>
-                          <span class="thumb">
-                            <img src="../images/news_img/r_img01.png" art="" />
-                          </span>
-                          <span class="thumb_text">"타격기계김현수"3안타1볼넷
-                          </span>
-                       </li>
+
                     </ul>
                 </div>
             </div>
