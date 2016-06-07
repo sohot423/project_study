@@ -1,0 +1,111 @@
+파이어폭스 shift+F5
+크롬 F12
+
+overflow: hidden; 주어진 영역을 넘어가면 넘어간 부분을 숨긴다.
+overflow: visible; 주어진 영역을 넘어가도 보인다.
+
+1. float은 공중에 떠있는 것이다.
+*( 위에꺼엔 적용 안됨)
+2. float가 선언된 엘리먼트는 다른 컨텐츠가 피해간다.
+
+부모 엘리먼트에
+height : auto; overflow: hidden; 을 주면 자식 엘리먼트가 flow되도 그 컨텐츠만큼 자리 차지함
+그 밑에 다른 섹션이 들어와도 위로 올라오지 않음
+
+픽셀을 %로 바꾸는 백분율 계산
+100(A넓이)/898(전체넓이)*100=%
+
+outline 텍스트 테두리를 의미
+
+clear: left; --> float-left 속성을 가진 엘리먼트 밑에가서 붙는다. 
+
+저작자
+명시도
+우선순
+
+.text{color:#0F0}
+p{color:#F0F !important} - 1위
+#text{color:#FF0}
+
+선택자. 엘리먼트에게 스타일명령을 하기위한 방법이다.
+
+p 태그선택방법
+. className
+#idname
+[속성] ex) <a href="">
+[href]{style....} -> href라는 속성을 가지고있는 전부선택
+[href="http://naver.com"]
+
+a,p 동시선택자
+[href^="foo"] 속성의 값중에 foo라는 문자로 시작되는 엘리먼트를 선택한다
+[href$="foo"] 속성의 값중에 foo라고 끝나는 엘리먼트를 선택한다.
+[href*="foo"] 속성의 값중에 foo라는 문자가 포함되어있는 엘리먼트를 선택한다.
+
+: 필터선택자
+:first-child - 엘리먼트중 첫번째에 해당하는 엘리먼트를 선택한다.
+a 
+a:link 링크가 잇는 선택자
+a:hover 마우스가 오버된 선택자
+a:visibted 한번 방문한 선택자
+a:action 마우스를 클릭햇을 때 발생하는 선택자
+
+:target : 타켓선택자는 아이디가 발생된 엘리먼트와 연관관계를 만들어 클릭시 해당 타겟 엘리먼트에게 스타일시트를
+           부여할 수 잇다.
+
+
+호환성이 떨어지는 선택자
+:last-child - 엘리먼트중 마지막에 해당하는 엘리먼트를 선택한다.
+(호환성이 떨어님으로 되도록 first-child로 사용될수있는 조건을 만들어줘야한다.)
+::before 엘리먼트의 전부분에 다른컨텐츠로 엘리먼트를 만들어 사용할 수 있다.
+::after 엘리먼트의 뒷부분에 다른 컨텐츠로 엘리먼트를 만들어 사용할 수 잇다.
+
+다음선택자
++ : 부호를 이용해서 선택자는 다음 선택자이다. (Next선택자)
+ex) li:first-child+li 
+~ : Next All선택자는 선택된 엘리먼트를 제외하고 그다음 엘리먼트부터 마지막 엘리먼트까지 선택할 수 있다.
+
+
+자식요소 선택자
+div p 자식요소 선택자중 처음 시작으로부터 마지막에 작성된 선택자는 하위 모든컨텐츠의 p태그를 검색한다.
+div > p 조건선택자 : 하위구조중에 같은 조건인 경우에만 해당
+
+인라인 속성 태그들은 width height값 안먹음..
+인라인은 마진값도 좌우만 먹고 상하는 먹지않음.
+패딩은 먹히지만 위치변동은 생기지않는다. display 속성을 블럭으로 바꿔주면 제어가 쉬움.
+
+아톰 ctrl shift h pull
+
+position 
+
+static 기본값, 포지션을 설정하지 않은 상태
+relative 상대적 / 현재의 위치로부터 상대적으로 위치를 잡음(활용 많음) - 실제로는 현재위치에 있음.
+absolute 절대적 / x축 y축 0기준 좌표 화면기준으로 움직임
+fixed 고정적 / 부모자식 관계 성립 안됨...브라우저에 픽스됨
+
+z-index 높낮이
+위치값
+top
+left
+right
+코드상 마지막으로 쓰는게 덮어버림. 그럴때 z-index:1; 을 주면 위로 올라옴
+
+parents
+나보다 상위(밖에 테두리)에 포지션이 선언되어있으면 내가 부모가 될 수 잇음. 
+(나보다 가까운 엘리먼트에 포지션을 주면 부모라고 인식)
+(포토샵에서 레이어 올려주는 효과)
+bottom
+
+
+div.*2
+ol>li*10>a{}
+
+파이어폭스 headingmap
+html validator
+shift + F5
+Emmet Review
+
+마진겹침현상 
+그래서 ul, ol, body, h1{margin:0; padding:0;} 
+* ir값
+
+.hide{width:0; height:0; overflow:hidden; position:absolute; left:-9999px; top:-9999px}
