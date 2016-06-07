@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+ <form action="./" method="get">
+     <!-- form/ name은 자리만 만들기 : 개발자영역  -->
+ <fieldset>
+   <legend>필수입력</legend>
+        <ul>
+          <li>
+              <label for="userId">아이디</label>
+              <input type="text" id="userId" name="Name" value="아이디" />
+              <!-- value 대신 placeholder쓰면 아이디가 입력시 지워짐-->
+          </li>
+          <li>
+              <label for="userId">비밀번호</label>
+              <input type="password" id="userId" name="PW"/>
+          </li>
+          <li>
+              <label for="man">성별</label>
+              <input type="radio" name="sex" id="man"/><label for="man">남자</labal>
+              <input type="radio" name="sex" id="Woman"/><label for="woman">여자</labal>
+              <input type="radio" name="sex" id="bisexuality"/><label for="bisexuality">양성</labal>
+          </li>
+          <li>
+              <label for="a1">결혼여부</label>
+              <input type="checkbox" id="a1"><label for="a1">미혼</label>
+              <input type="checkbox" id="a2"><label for="a2">기혼</label>
+              <input type="checkbox" id="a3"><label for="a3">앞으로예정</label>
+              <input type="checkbox" id="a4"><label for="a4">못갈것같은 같은데 가면 로또</label>
+              <input type="checkbox" id="a5"><label for="a5">중혼</label>
+          </li>
+          <li>
+              <labal for="photoupload">사진업로드</la>
+              <input type="file" id="photoupload"/>
+          </li>
+        </ul>
+            <input type="button" value="취소">
+            <input type="button" value="전송">
+            <input type="button" value="초기화">
+ </fieldset>
+
+
+
+</body>
+</html>

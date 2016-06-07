@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        html,body{height:100%;}
+        *{margin: 0;padding: 0;}
+        .page1{height:100%; position:relative; overflow:hidden;}
+        .dptable{display:table; position:absolute; width:100%; height:100%; border:1px #F00 solid; top:0;}
+        .dptable-cell{display:table-cell; text-align:center; vertical-align:bottom; padding-bottom: 60px; color:#fff;}
+        .dptable-cell h2{font-size:4em;}
+        .dptable-cell2 p{font-size: 2em;}
+        .page1 video{position:fixed; top:50%; margin-top:-488.5px;}
+        .page2{height:100%; background-color:rgba(255,255,255,0.8); position:relative; z-index:1; text-align:center; }
+        .page2 dptable dptable-cell p{font-size: 2em; color:#000;}
+        
+        .dptable2{display:table; position:absolute; width:100%; height:100%; border:1px #F00 solid; top:0;}
+        .dptable-cell2{display:table-cell; text-align:center; vertical-align:middle; padding-bottom: 60px; color:#000;}
+        .page3{height:100%; background-image: url(../images/restaurant.jpg); background-repeat:no-repeat; 
+         -webkit-background-size: cover;
+         background-size: cover; background-attachment: fixed;
+         position:relative; z-index:1;}
+        .dptable3{display:table; position:absolute; width:100%; height:100%; border:1px #F00 solid; top:0;}
+        .dptable-cell3{display:table-cell; text-align:center; vertical-align:middle; padding-bottom: 60px; color:#000;}
+        .dptable-cell3 p{font-size: 5em;}
+    </style>
+</head>
+<body>
+    <div class="page1">
+        <video width="100%" autoplay loop>
+            <source src="../mov/Coffee.mp4" type="video/mp4">
+        </video>
+        <div class="dptable">
+            <div class="dptable-cell">
+                <h2>いちばん美味しいのは</h2>
+                <p>DOUTOR Coffee</p>
+            </div>
+        </div>
+    </div>
+    <div class="page2">
+        <div class="dptable2">
+            <div class="dptable-cell2">
+                <p>忘れられない魔法の味...</p>
+            </div>
+        </div>    
+    </div>        
+    <div class="page3">
+                <div class="dptable3">
+            <div class="dptable-cell3">
+                <p>いらっしゃいませ^_^</p>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>
