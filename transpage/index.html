@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>트와이스</title>
+</head>
+  <style type="text/css">
+      *{
+       margin:0;
+       padding:0;      
+      }
+      body,html{height:100%;}
+      ul,ol{list-style:none;}
+      .wrapper{
+          height:100%; 
+          border:1px red solid;
+          background-image:url(../images/twice2.jpg);
+          background-repeat:no-repeat;
+          background-size:cover;
+          background-position:center 0;
+      }
+       .wrapper .logo{
+           width: 350px; height: 350px;
+           background-image: url(../images/jyp_img01.png);
+           border:1px red solid;
+           position:absolute;
+           top:35%;
+           transform:scale(0.9,0.9);
+           /*사이즈 축소하기*/
+           transition:1s;
+           /*과정 꼭 써야함*/
+        }
+       .wrapper .logo:hover{
+           transform:scale(1.2,1.2);
+           opacity:0;
+        }    
+  
+        .wrapper .header{
+        padding:0 30px;
+        box-sizing: border-box;    
+        position:fixed;
+        width:100%;
+        left:0;
+        top:0;
+        height:100px; 
+        background-color:rgba(255,255,255,0.7);
+        box-shadow:0 2px 5px #000;
+        transition:1s;
+        }
+        
+        .wrapper .header .mark a{display:block; 
+        width: 104px; height:40px; padding:25px;
+        background-image: url(../images/jyp_img02.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        transition:1s;
+        }
+        .wrapper .header .mark a:hover{
+         transform:rotateY(180deg);
+        }
+        
+        
+        @media screen and (max-width: 768px){
+        .wrapper{
+             background-image: url(../images/twice.jpg);
+             background-position: center center;}
+      
+        .wrapper .logo{
+            position:relative;
+            margin:0 auto;
+            top:10%;
+            }
+        .wrapper .header{
+            height:45px;
+            padding:0;
+            background-color:#FFF;
+            }    
+        .wrapper .header .mark a{
+            padding:0;
+            height:45px;
+            transform:scale(0.6,0.6);
+            }   
+          }
+          
+  </style>
+<body>
+    <div class="wrapper">
+        <div class="header">
+            <div class="mark">
+                <a href=""></a>
+            </div>
+        </div>
+        <div class="logo"></div>
+    </div>
+</body>
+</html>

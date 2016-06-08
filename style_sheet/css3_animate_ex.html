@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>애니메이션 예제</title>
+    <style type="text/css">
+        .wrap{outline:1px red solid;
+            background-color:#000;
+            width:709px;
+            height:728px;
+            position:relative;
+            
+            }
+        .wrap .box1{
+            background-color:#fff;
+            width:156px;
+            height:224px;
+            position:absolute;
+            top:0;
+            animation:box1 2000ms;
+            
+            }  
+        .wrap .box2{
+            background-color:#fff;
+            width:156px;
+            height:270px;
+            position:absolute;
+            top:252px;
+            animation:box2 2000ms;
+            
+            }
+        .wrap .box3{
+            background-color:#0957a2;
+            width:156px;
+            height:187px;
+            position:absolute;
+            top:541px;
+            animation:box3 2000ms;
+            
+            }
+        .wrap .box4{
+            background-color:#ec1a0d;
+            width:536px;
+            height:522px;
+            position:absolute;
+            top:0;
+            left:173px;
+            animation:box4 2000ms;
+            
+            }
+        .wrap .box5{
+            background-color:#fff;
+            width:460px;
+            height:187px;
+            position:absolute;
+            top:541px;
+            left:173px;
+  
+            }   
+        .wrap .box6{
+            background-color:#fff;
+            width:55px;
+            height:77px;
+            position:absolute;
+            top:541px;
+            left:654px;
+            
+            }
+        .wrap .box7{
+            background-color:#f5ef1d;
+            width:55px;
+            height:77px;
+            position:absolute;
+            top:650px;
+            left:654px;
+          
+            }    
+            
+
+        @keyframes box1 {
+            from { margin-left:0px; }
+            to { margin-left:550px;  background-color:#000; transform:rotate(50deg);}
+        }
+        
+        @keyframes box2 {
+            from { margin-left:0px; }
+            to { margin-left:550px;  background-color:#000; transform:rotate(50deg);}
+        }
+        
+        @keyframes box3 {
+            from { margin-left:0px; }
+            to { margin-left:550px;  background-color:#000; transform:rotate(50deg);}
+        }
+        @keyframes box4 {
+            from { margin-left:0px; }
+            to { margin-left:550px;  background-color:#000; transform:rotate(50deg);}
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+    </div>
+</body>
+</html>
+
+
+<!-- wrapper에 hover되도 다 각각 움직이게 하려면.
+    wrapper:hover .box1{}
+    wrapper:hover .box2{}
+    wrapper:hover .box3{}
+    wrapper:hover .box4{}
+    wrapper:hover .box5{}
+    
+    
+    wrapper div:hover {}
+    .box1{ani}
+    .box2{ani}
+    .box3{ani} x
+    
+    
+    <div class="wrapper">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+    </div>
+    
+소스는 www.justinaguilar.com 에서 다운받으면 됨
+    -->
