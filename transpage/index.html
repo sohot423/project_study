@@ -4,93 +4,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>트와이스</title>
-</head>
-  <style type="text/css">
-      *{
-       margin:0;
-       padding:0;      
-      }
-      body,html{height:100%;}
-      ul,ol{list-style:none;}
-      .wrapper{
-          height:100%; 
-          border:1px red solid;
-          background-image:url(../images/twice2.jpg);
-          background-repeat:no-repeat;
-          background-size:cover;
-          background-position:center 0;
-      }
-       .wrapper .logo{
-           width: 350px; height: 350px;
-           background-image: url(../images/jyp_img01.png);
-           border:1px red solid;
-           position:absolute;
-           top:35%;
-           transform:scale(0.9,0.9);
-           /*사이즈 축소하기*/
-           transition:1s;
-           /*과정 꼭 써야함*/
+    <style type="text/css">
+        *{margin: 0;padding: 0;}
+        body,html{height:100%;}
+        ul,ol{list-style:none;}
+        .wrapper{
+            height:100%; border:1px #F00 solid;
+            background-image: url(http://ghavpdlwl.blob.core.windows.net/twice/bg-pc.jpg);
+            background-repeat: no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center top;
         }
-       .wrapper .logo:hover{
-           transform:scale(1.2,1.2);
-           opacity:0;
-        }    
-  
-        .wrapper .header{
-        padding:0 30px;
-        box-sizing: border-box;    
-        position:fixed;
-        width:100%;
-        left:0;
-        top:0;
-        height:100px; 
-        background-color:rgba(255,255,255,0.7);
-        box-shadow:0 2px 5px #000;
-        transition:1s;
+        .wrapper .logo{
+            width: 350px;
+            height:350px;
+            background-image: url(http://twice.jype.com/images/mainlogo.png);
+            border:1px #F00 solid;
+            position:absolute; top:35%;
+            transform:scale(0.9,0.9);
+            transition:1s;
         }
         
-        .wrapper .header .mark a{display:block; 
-        width: 104px; height:40px; padding:25px;
-        background-image: url(../images/jyp_img02.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        transition:1s;
+        .wrapper .logo:hover{
+            transform:scale(1.2,1.2);
+            opacity:0;
+        }
+        
+        .wrapper .header{
+            position:fixed;
+            padding:0 30px;
+            box-sizing: border-box;
+            width:100%;
+            left:0;
+            top:0;
+            height:100px; 
+            background-color:rgba(255,255,255,0.7);
+            box-shadow:0 2px 5px #000;
+            transition:1s;
+        }
+        
+        .wrapper .header .mark{
+            float:left;
+        }
+        .wrapper .header .nav{
+            float:right;
+        }
+        
+        .wrapper .header .nav button{
+            display:none;
+        }
+        
+        
+        .wrapper .header .nav ul{
+            font-size:0;
+            color:#08e9dc;
+        }
+        .wrapper .header .nav li{
+            display: inline-block;
+            font-size:14px;
+            vertical-align:top;
+            line-height:100px;
+            
+            
+            
+        }
+        
+        .wrapper .header .nav li a{
+            padding:0 15px;
+            display:block;
+            transition:0.3s;
+            text-decoration:none;
+            font-size:1.1em;
+            font-weight:bold;
+            color:#08e9dc;
+        }
+        
+        .wrapper .header .nav li a:hover{
+            border-top:3px #ffb0b0 solid;
+            color:#ffb0b0;
+            background-color:rgba(255,255,255,0.5);
+            /*마지막 숫자가 opacity*/
+            box-sizing:border-box;
+            /*overflow:hidden;*/
+            
+        }
+        
+        
+        .wrapper .header .mark a{
+            display:block; 
+            width: 104px; height:40px; padding:25px;
+            background-image: url(http://twice.jype.com/images/logo-s.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            transition:1s;
         }
         .wrapper .header .mark a:hover{
-         transform:rotateY(180deg);
+            transform:rotateY(180deg);
+            padding-bottom:5px;
+        }
+        
+        @media screen and (max-width:768px){
+            .wrapper{
+                background-image: url(http://ghavpdlwl.blob.core.windows.net/twice/bg-720.jpg);
+                background-position: center center;
+            }
+            
+            .wrapper .logo{
+                position:relative;
+                margin:0 auto;
+                top:20%;
+            }
+            
+            .wrapper .header{
+                height:40px;
+                padding:0;
+                background-color:#FFF;
+            }
+            
+            .wrapper .header .mark a{
+                padding:0;
+                height:45px;
+                transform:scale(0.6,0.6);
+            }
+            
+            .wrapper .header .nav button{
+                display:block;
+                width:200px;
+                height:40px; 
+                border:0 none;
+                padding:0 10px;
+                font-size:1.1em;
+                background-color:#08e9dc;
+                color:#fff;
+                cursor:pointer;
+            }
+            
+            
+            /*임시*/
+            .wrapper .header .nav button:hover + ul{
+                /*버튼 다음 ul*/
+                display:block;
+
+            }
+
+            .wrapper .header .nav ul{
+                display:none;
+                position:absolute;
+                background-color: rgba(255,255,255,0.6);
+            }
+            
+            .wrapper .header .nav ul:hover{
+                display:block;
+            }
+            
+            /*메뉴바 펼쳐진채로 하위메뉴 선택가능*/
+            .wrapper .header .nav ul li{
+                line-height:40px;
+                display:block;
+                width:200px;
+            }
+            
+            .wrapper .header .nav ul li a:hover{
+                border-top:0px none;
+                border-left:3px solid #f00;
+            }
+            
+            .wrapper .header .mark a:hover{
+                transform:scale(0.6,0.6) rotateY(180deg);
+                line-height:40px;
+                width:200px;
+            }
+            
         }
         
         
-        @media screen and (max-width: 768px){
-        .wrapper{
-             background-image: url(../images/twice.jpg);
-             background-position: center center;}
-      
-        .wrapper .logo{
-            position:relative;
-            margin:0 auto;
-            top:10%;
-            }
-        .wrapper .header{
-            height:45px;
-            padding:0;
-            background-color:#FFF;
-            }    
-        .wrapper .header .mark a{
-            padding:0;
-            height:45px;
-            transform:scale(0.6,0.6);
-            }   
-          }
-          
-  </style>
+        
+    </style>
+</head>
 <body>
     <div class="wrapper">
         <div class="header">
+            
             <div class="mark">
                 <a href=""></a>
             </div>
+            
+            <div class="nav">
+                <button>Close Menu</button>
+                <ul>
+                    <li><a href="">PROFILE</a></li>
+                    <li><a href="">DISCOGRAPHY</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">VIDEO</a></li>
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">SCHEDULE</a></li>
+                </ul>
+            </div>
+            
         </div>
+        
+        
+        
         <div class="logo"></div>
     </div>
 </body>
