@@ -1,6 +1,10 @@
 body {
   font-family: "돋움", sans-serif;
 }
+.btn1 {
+  width: 100px;
+  height: 200px;
+}
 .btn {
   border: 2px #CCC solid;
   display: inline-block;
@@ -17,6 +21,11 @@ body {
   background-color: #F00;
 }
 .btn:hover {
+  background: #F00;
+}
+.box1 {
+  width: 100px;
+  height: 220px;
   background: #F00;
 }
 .btn-pointer {

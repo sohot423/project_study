@@ -9,6 +9,11 @@ body{font-family: "돋움",sans-serif;}
     *display:inline;
 }
 
+.btn1 {
+    width:100px;
+    height:200px;
+}
+
 .btn-style(@line_width:2px, @height:30px, @fontsize:1em, @bgcolor:#F00){
     border:@line_width #CCC solid;
     .inlin-block();
@@ -30,6 +35,55 @@ body{font-family: "돋움",sans-serif;}
     .btn-style()
 }
 
+.box1{
+    width:100px;
+    .topmenu(20px);
+    background:#F00;
+}
+
+.box2(@box3:30px){
+    width:@box3;
+    .topmenu(@box3);
+    background:#000;
+}
+.topmenu(@a){
+    height:(@a + 200)
+}
+
 .btn-pointer {
     .btn-style(3px,100px,20px,#f00)
 }
+
+// .asideMenu(10%){
+   
+    
+//     width:10%;
+    
+//   .topmenu(10%);
+// }
+
+// .topmenu(@a){
+    
+//     height:percentage(@a);
+    
+// }
+
+// div{
+//     .asideMenu(10%)
+// }
+
+// .a{
+//     .asideMenu(20%)
+// }
+// .b{
+//     .asideMenu(30%)
+// }
+// .c{
+//     .asideMenu(40%)
+// }
+// .d{
+//     .asideMenu(50%)
+// }
+// .e{
+//     .asideMenu(60%)
+// }
