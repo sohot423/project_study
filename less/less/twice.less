@@ -1,0 +1,55 @@
+*{margin:0; padding:0;}
+body,html{font-family: "돋움",san-serif; height:100%;}
+ul,ol{list-style:none;}
+
+@imgurl:"../../images/";
+@basecolor:#fff;
+@basecolor_1:#3F3F3F;
+@fR:right;
+@fL:left;
+
+.inline-block(){
+    display:inline-block;
+}
+.block(){
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.wrapper{
+    height: 100%; border:1px red solid;
+    background-image: url("@{imgurl}twice2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    
+    .header{
+        height: 100px; width: 100%; position:fixed; left: 0; top:0;
+        background-color: rgba(255,255,255,0.7);
+        box-shadow: 0 2px 5px #000;
+        padding:0 30px;
+        
+        .mark{float:@fL;
+            a{display:block; width:104px; height:40px;
+              padding:25px; background-image: url("@{imgurl}jyp_img02.png"); background-repeat:no-repeat;
+              background-position:center; transition:1s; }
+            &:hover{transform:rotateY(180deg);}
+            
+        } //mark 닫기
+        .nav{float:@fR;
+            button{display:none;}
+            ul{ font-size:0px;
+                li{.inline-block(); color:#08e9dc; font-size:14px; line-height:100px; font-weight:bold; padding:0 15px;
+                  a{text-decoration:none; color:#08e9dc; .block(); }
+                  &:hover{ border-top:3px #ffb0b0 solid; color:#ffb0b0; background-color:rgba(255,255,255,0.5);
+                      box-sizing:border-box;}
+                } //li 닫기
+            }// ul 닫기
+        } //nav 닫기
+    } //header 닫기
+    .logo{
+        width:350px; height:350px; background-image: url("@{imgurl}jyp_img01.png");
+        position:absolute; top:35%;
+    }
+} //wrapper 닫기

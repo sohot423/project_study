@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  font-family: "돋움", san-serif;
+  height: 100%;
+}
+ul,
+ol {
+  list-style: none;
+}
+.wrapper {
+  height: 100%;
+  border: 1px red solid;
+  background-image: url("../../images/twice2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
+}
+.wrapper .header {
+  height: 100px;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 2px 5px #000;
+  padding: 0 30px;
+}
+.wrapper .header .mark {
+  float: left;
+}
+.wrapper .header .mark a {
+  display: block;
+  width: 104px;
+  height: 40px;
+  padding: 25px;
+  background-image: url("../../images/jyp_img02.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: 1s;
+}
+.wrapper .header .mark:hover {
+  transform: rotateY(180deg);
+}
+.wrapper .header .nav {
+  float: right;
+}
+.wrapper .header .nav button {
+  display: none;
+}
+.wrapper .header .nav ul {
+  font-size: 0px;
+}
+.wrapper .header .nav ul li {
+  display: inline-block;
+  color: #08e9dc;
+  font-size: 14px;
+  line-height: 100px;
+  font-weight: bold;
+  padding: 0 15px;
+}
+.wrapper .header .nav ul li a {
+  text-decoration: none;
+  color: #08e9dc;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.wrapper .header .nav ul li:hover {
+  border-top: 3px #ffb0b0 solid;
+  color: #ffb0b0;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+}
+.wrapper .logo {
+  width: 350px;
+  height: 350px;
+  background-image: url("../../images/jyp_img01.png");
+  position: absolute;
+  top: 35%;
+}
